@@ -2,10 +2,10 @@ let express = require('express');
 let cors = require('cors');
 let bodyParser = require('body-parser');
 const createError = require('http-errors');
-const { connect, disconnect } = require('./database/db');
+const { connect, disconnect } = require('../database/db');
 const path = require('path')
-const sign = require("./routes/sign");
-const transaction = require("./routes/transaction");
+const sign = require("../routes/sign");
+const transaction = require("../routes/transaction");
 
 const app = express();
 app.use(bodyParser.json());
