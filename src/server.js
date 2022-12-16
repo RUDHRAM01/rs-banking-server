@@ -32,6 +32,12 @@ const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
 
+process.on('unhandledRejection', err => {
+  server.close(() => {
+    process.exit(1);
+  });
+})
+
 // 404 Error
 app.use((req, res, next) => {
   next(createError(404));
