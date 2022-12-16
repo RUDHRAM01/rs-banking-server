@@ -3,7 +3,7 @@ const logger = require('pino')()
 
 const connect = () => {
 
-      const url = process.env.MONGO_STRING || 'mongodb+srv://rudhramsaraswat:RudhramS123321@rudhrambanksystem.580vpfx.mongodb.net/?retryWrites=true&w=majority';
+      const url = process.env.MONGO_STRING || 'url';
 
       mongoose.connect(url, { useNewUrlParser:true,useUnifiedTopology:true});
 
