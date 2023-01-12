@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 
 const TransactionInSchema = new mongoose.Schema(
   {
-    transaction:"string",
-    date: "string",
-    amount:"Number",
+    name:"string",
+    cater: "string",
+    url:"string",
 
     createDate: "date",
     updatedDate: "date",
